@@ -1,0 +1,17 @@
+pipeline {
+    agent {
+        docker { image 'ubuntu:latest' }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Welcome to Jenkins'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'cat /etc/lsb-release'
+            }
+        }
+    }
+}
